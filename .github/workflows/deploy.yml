@@ -1,35 +1,44 @@
-name: Deploy Quartz Site
+name: Build and Deploy to /docs folder on v4 branch
 
 on:
   push:
     branches:
-      - root   # change this to your main branch if needed
+      - v4
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # allows pushing back to repo
 
-    - name: Setup Node.js 22
-      uses: actions/setup-node@v3
-      with:
-        node-version: 22
-        cache: 'npm'
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+          cache: 'npm'
 
-    - name: Update npm to latest
-      run: npm install -g npm@latest
+      - name: Update npm to latest
+        run: npm install -g npm@latest
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build site
-      run: npm run build
+      - name: Build site
+        run: npm run build
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs   # adjust if your output folder is different
+      - name: Replace /docs with build output
+        run: |
+          rm -rf docs
+          mv public docs
+
+      - name: Commit and push changes to /docs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Update docs folder with latest build [skip ci]" || echo "No changes to commit"
+          git push
