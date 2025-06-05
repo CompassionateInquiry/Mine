@@ -3,14 +3,15 @@ name: Deploy Quartz Site
 on:
   push:
     branches:
-      - v4  # change to your main branch name if different
+      - v4  # replace with your main branch name if different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -23,8 +24,10 @@ jobs:
       - name: Build Quartz site
         run: npm run build
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to branch root (v4)
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: v4
           publish_dir: ./public
+          keep_files: false  # cleans out old files before deploying
