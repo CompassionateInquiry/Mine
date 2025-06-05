@@ -6,7 +6,7 @@ description: This is a test index page to verify Quartz site deployment.
 
 # Hello from Quartz!
 
-This is a **test page** to check if your Quartz site is building and deploying correctly.
+This is a **test page** to check if your Quartz site is building and deploying correctly
 
 - Add your own Markdown files to the `/content` folder.
 - Edit this file or add new posts.
