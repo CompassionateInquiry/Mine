@@ -3,31 +3,33 @@ name: Deploy Quartz Site
 on:
   push:
     branches:
-      - v4  # your branch name
+      - root   # change this to your main branch if needed
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout repo
+      uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22'  # update this
+    - name: Setup Node.js 22
+      uses: actions/setup-node@v3
+      with:
+        node-version: 22
+        cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
+    - name: Update npm to latest
+      run: npm install -g npm@latest
 
-      - name: Build Quartz site
-        run: npm run build
+    - name: Install dependencies
+      run: npm install
 
-      - name: Deploy to branch root (v4)
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: v4
-          publish_dir: ./public
-          keep_files: false
+    - name: Build site
+      run: npm run build
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs   # adjust if your output folder is different
