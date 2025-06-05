@@ -3,7 +3,7 @@ name: Deploy Quartz Site
 on:
   push:
     branches:
-      - v4  # replace with your main branch name if different
+      - v4  # your branch name
 
 jobs:
   deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '22'  # update this
 
       - name: Install dependencies
         run: npm install
@@ -30,4 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: v4
           publish_dir: ./public
-          keep_files: false  # cleans out old files before deploying
+          keep_files: false
