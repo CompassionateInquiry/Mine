@@ -413,7 +413,7 @@ Dan zou ik tenminste nog in mijn laatste momenten tevreden kunnen zijn dat ik me
 Omdat hij ook een plek heeft. Ik wil hem niet kwijtraken door het rationaliseren, filosoferen en alles wat er om heen komt.  
 De zorgeloze ik, kan ik vaak mee lachen, heb ik avonden mee die ik voor altijd met mij meedraag. Momenten die ik koester met anderen. Er zit zelfs een stukje hoop in. Hoop dat het eigenlijk allemaal niet zoveel uitmaakt. Dat ik simpelweg kan zijn, en dat dat dan ook al genoeg is.  
   
-# Bouwsteen 3 Rollen
+# Bouwsteen 3 Bronnen van steun
 ## Voorwoord  
   
 Voordat ik deze vragen beantwoord wil ik eerst iets duidelijk maken, omdat het (toch) door deze vragen gaat lopen, neem ik liever de tijd om dit structureel te illustreren.  
