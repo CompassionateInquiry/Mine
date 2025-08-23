@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>Herstelverhaal 2025</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="Quartz 4"/><meta property="og:title" content="Herstelverhaal 2025"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Herstelverhaal 2025"/><meta name="twitter:description" content="Kennismaking Wie ben ik? Mijn naam is Tristan, ik ben 22 jaar en woon in Maastricht."/><meta property="og:description" content="Kennismaking Wie ben ik? Mijn naam is Tristan, ik ben 22 jaar en woon in Maastricht."/><meta property="og:image:alt" content="Kennismaking Wie ben ik? Mijn naam is Tristan, ik ben 22 jaar en woon in Maastricht."/><meta property="twitter:domain" content="quartz.jzhao.xyz"/><meta property="og:url" content="https://quartz.jzhao.xyz/Herstelverhaal-2025"/><meta property="twitter:url" content="https://quartz.jzhao.xyz/Herstelverhaal-2025"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Kennismaking Wie ben ik? Mijn naam is Tristan, ik ben 22 jaar en woon in Maastricht."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvTWluZS9NaW5lL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7O0FBR0Y7RUFDRTs7QUFJRjtFQUNFO0VBQ0E7RUFDQSIsInNvdXJjZXNDb250ZW50IjpbIi5leHBhbmQtYnV0dG9uIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbG9hdDogcmlnaHQ7XG4gIHBhZGRpbmc6IDAuNHJlbTtcbiAgbWFyZ2luOiAwLjNyZW07XG4gIHJpZ2h0OiAwOyAvLyBOT1RFOiByaWdodCB3aWxsIGJlIHNldCBpbiBtZXJtYWlkLmlubGluZS50c1xuICBjb2xvcjogdmFyKC0tZ3JheSk7XG4gIGJvcmRlci1jb2xvcjogdmFyKC0tZGFyayk7XG4gIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgYm9yZGVyOiAxcHggc29saWQ7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgb3BhY2l0eTogMDtcbiAgdHJhbnNpdGlvbjogMC4ycztcblxuICAmID4gc3ZnIHtcbiAgICBmaWxsOiB2YXIoLS1saWdodCk7XG4gICAgZmlsdGVyOiBjb250cmFzdCgwLjMpO1xuICB9XG5cbiAgJjpob3ZlciB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJvcmRlci1jb2xvcjogdmFyKC0tc2Vjb25kYXJ5KTtcbiAgfVxuXG4gICY6Zm9jdXMge1xuICAgIG91dGxpbmU6IDA7XG4gIH1cbn1cblxucHJlIHtcbiAgJjpob3ZlciA+IC5leHBhbmQtYnV0dG9uIHtcbiAgICBvcGFjaXR5OiAxO1xuICAgIHRyYW5zaXRpb246IDAuMnM7XG4gIH1cbn1cblxuI21lcm1haWQtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICBjb250YWluOiBsYXlvdXQ7XG4gIHotaW5kZXg6IDk5OTtcbiAgbGVmdDogMDtcbiAgdG9wOiAwO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIG92ZXJmbG93OiBoaWRkZW47XG4gIGRpc3BsYXk6IG5vbmU7XG4gIGJhY2tkcm9wLWZpbHRlcjogYmx1cig0cHgpO1xuICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNSk7XG5cbiAgJi5hY3RpdmUge1xuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgfVxuXG4gICYgPiAjbWVybWFpZC1zcGFjZSB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB0b3A6IDUwJTtcbiAgICBsZWZ0OiA1MCU7XG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoLTUwJSwgLTUwJSk7XG4gICAgaGVpZ2h0OiA4MHZoO1xuICAgIHdpZHRoOiA4MHZ3O1xuICAgIG92ZXJmbG93OiBoaWRkZW47XG5cbiAgICAmID4gLm1lcm1haWQtY29udGVudCB7XG4gICAgICBwYWRkaW5nOiAycmVtO1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://quartz.jzhao.xyz/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://quartz.jzhao.xyz/Herstelverhaal-2025-og-image.webp"/><meta property="og:image:url" content="https://quartz.jzhao.xyz/Herstelverhaal-2025-og-image.webp"/><meta name="twitter:image" content="https://quartz.jzhao.xyz/Herstelverhaal-2025-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="Herstelverhaal-2025"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">Quartz 4</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="Reader mode"><title>Reader mode</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Herstelverhaal 2025</a></div></nav><h1 class="article-title">Herstelverhaal 2025</h1><p show-comma="true" class="content-meta"><time datetime="2025-08-23T18:39:23.000Z">Aug 23, 2025</time><span>36 min read</span></p></div></div><article class="popover-hint"><h1 id="kennismaking">Kennismaking<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kennismaking" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Wie ben ik?</strong></p>
+<p>Mijn naam is Tristan, ik ben 22 jaar en woon in Maastricht.<br/>
+Mijn hobby’s zijn gitaar spelen, teksten schrijven, lezen en het beoefenen van Muay Thai.<br/>
+Ik hou van elektronische muziek (EDM) en ga hier dus ook vaak naar feesten van.<br/>
+Dit zijn in mijn hoekje van de EDM vooral House-, (Hard) Techno- en Psytrance-feesten.<br/>
+Ik vind de vrijheid, acceptatie en connectie die redelijk karakteriserend zijn voor deze scenes erg fijn, en dat zijn ook de dingen die me deels blijven terugroepen naar de feesten.
+Dit schets in die zin ook een beeld van wat ik verlang van de wereld om mij heen.
+Vrijheid om uit te zoeken wie ik ben. Acceptatie van de mensen om mij heen wanneer ik daar een idee van heb. En een stukje connectie wat ik er voor terug krijg als ik mijn authentische zelf laat zien.</p>
+<h1 id="herstel">Herstel<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#herstel" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Hoe zie ik mijn herstel?</strong></p>
+<p>Er komen een aantal vragen bij mij op bij deze vraag.<br/>
+Ik ga ze één voor één beantwoorden vanuit mijn perspectief:</p>
+<hr/>
+<p><strong>Wat betekent herstel voor mij?</strong><br/>
+Herstel betekent voor mij verschillende dingen.<br/>
+Maar wellicht het belangrijkste is dat ik niet meer hoef weg te rennen van mezelf.<br/>
+Voordat ik in herstel zat, rende ik altijd weg van mezelf.<br/>
+Of dat nou een gevoel was, of iets wat ik niet wilde zijn omdat mijn omgeving het niet begreep of goedkeurde.<br/>
+Ik rende weg van wat er in mij omhoog kwam.<br/>
+Dit ging bij mij gepaard met drugsgebruik en uiteindelijk verslaving.</p>
+<hr/>
+<p><strong>Wat heb ik dan geleerd in mijn herstel?</strong><br/>
+Het moeilijkste wat ik heb moeten leren, maar ook het meest waardevolle,  is dingen laten zijn.<br/>
+Een gevoel van verdriet of hopeloosheid gaat altijd weer voorbij.<br/>
+Een gedachte maakt mij niet wie ik ben.<br/>
+Ik ben meer dan mijn gedachten en emoties.<br/>
+Er is iets in mij dat dit allemaal waarneemt.<br/>
+Als ik me niet laat meeslepen door gedachten of emoties, merk ik dat op.<br/>
+Er is iets dat waarneemt. <em>Dat ben ik</em></p>
+<hr/>
+<p><strong>Waar richt ik mij op?</strong><br/>
+Ik geloof dat een van de belangrijkste stappen is te weten waar je naartoe werkt.<br/>
+Hoe kan ik bewegen naar een groter doel als ik niet weet wat dat doel is?<br/>
+Dat doel is menselijk en diep persoonlijk.<br/>
+Waar ik vroeger koos voor status en materialisme, door ICT’er te willen worden, en dan specifiek ethisch hacker,
+kwam ik er later achter dat dit eigenlijk niet was wat ik wilde. Dit was mij opgelegd.</p>
+<p>Ik ben twee keer opgenomen geweest in een instelling voor geestelijke gezondheidszorg vanwege een psychose.<br/>
+In mijn eerste opname ontdekte ik dat ik geen ICT wilde doen.<br/>
+Je kunt je dus afvragen: als ik mijn eerste psychose niet had gehad, had ik mijn leven dan gespendeerd in de ICT-wereld?<br/>
+Ik ben daarom dankbaar dat ik mijn eerste psychose heb gehad, hoe gek dat ook klinkt.</p>
+<p>Door mijn herstel kan ik nu leven naar mijn waarden.<br/>
+Dat wilde ik eerst ook, maar mijn verlies van controle over mijn eigen wereld stond dat in de weg.<br/>
+Dat brak mij.</p>
+<p>Enkele van mijn waarden die ik probeer na te leven zijn:</p>
+<ul>
+<li>
+<p><strong>Compassie:</strong> voor mij betekent dit dat ik besef dat iedereen een heel verhaal heeft over hoe ze zijn gekomen waar ze zijn. Ik zie alleen het eindresultaat. Compassie is het medicijn tegen oordelen.</p>
+</li>
+<li>
+<p><strong>Integriteit:</strong> dit betekent voor mij niet het ‘goede’ doen omdat ik er iets op te winnen heb, maar omdat het het goede is om te doen, dat is al reden genoeg.</p>
+</li>
+<li>
+<p><strong>Openheid van geest:</strong> bereid zijn om nieuwe perspectieven, ervaringen en concepten te omarmen. Ik wil zolang mogelijk vermijden vast te lopen in vaste gedachtepatronen en zo vloeibaar mogelijk blijven.</p>
+</li>
+</ul>
+<hr/>
+<p><strong>Omgaan met mijn kwetsbaarheid</strong><br/>
+Ik ben gediagnosticeerd met een bipolaire stoornis type 2.<br/>
+Net zoals bij veel mentale gezondheidsdiagnoses verdwijnt deze kwetsbaarheid nooit helemaal; je leert er alleen beter mee omgaan.<br/>
+In die zin is het anders dan ‘traditionele’ ziektes, waarbij je na genezing vaak zonder ziekte in gedachten door kunt gaan.</p>
+<p>Maar een mentale ‘ziekte’ gaat veel verder.<br/>
+Net zoals bij verslaving zit de diagnose in elke vezel van je bestaan . In je denken, in je aanleg voor intensiteit of extremen.<br/>
+Je hebt de keuze om dit te accepteren, of te ontkennen.</p>
+<p>Toen ik mijn diagnose kreeg, deed ik dat vooral eerst: ontkennen.<br/>
+Het voelde als een aanval op mijn denkwijze, en daarmee op mij als persoon.<br/>
+Later kwam acceptatie: ‘Oké, misschien klopt het wel wat ze zeggen.’<br/>
+Je leert tekenen herkennen: paniek, neiging tot obsessie. Allemaal dingen die mij maken wie ik ben.</p>
+<p>Vervolgens komt integratie.<br/>
+Ik weet dat ik, als ik me ertoe zet, makkelijk een weekend ergens in kan duiken (obsessie).<br/>
+Op een bepaalde manier is dat ook een kracht: ik kan in een weekend doen waar anderen een maand voor nodig hebben, juist door mijn obsessie en ‘tunnelvisie’.<br/>
+Soms kies ik er bewust voor om me door mijn obsessie te laten overnemen.<br/>
+Maar het is nu anders dan eerst: ik ben me er bewust van en zie het gebeuren.<br/>
+Als ik weet dat ik erin zit, kan ik bijvoorbeeld elke twee uur een timer zetten om even een blokje om te lopen, een domme video te kijken of te mediteren.<br/>
+De obsessie is er nog steeds, maar ik leer het voor mij te laten werken in plaats van ertegen te vechten.</p>
+<hr/>
+<p><strong>Wat zie ik als progressie?</strong><br/>
+Ik bedoel hiermee vooral het herkennen van mijn obsessie op het moment dat die plaatsvindt.<br/>
+Het zien van mijn patronen door er een stapje afstand van te nemen.<br/>
+Door het objectief te bekijken, kan ik het beoordelen.<br/>
+Hierdoor krijg ik een idee van wat ik wil veranderen (richting).<br/>
+Vervolgens kan ik tijd besteden aan uitzoeken hoe ik dit aanpak.<br/>
+Tegenover obsessie kan ik rustmomenten inzetten,<br/>
+tegenover oordelen bewust compassie hebben.</p>
+<p>Zo maak ik vooruitgang in mijn herstel.<br/>
+Het zien van wat je wilt veranderen (of waar je naartoe wilt), is in mijn ogen altijd de eerste stap.<br/>
+En misschien is het ook wat je ziet: dat je altijd iets wilt veranderen, terwijl je eigenlijk meer in het moment mag zijn.<br/>
+(Daar kom ik later nog op terug)</p>
+<p><strong>Waarom schrijf ik een digitaal herstelverhaal?</strong></p>
+<p>Ik wil mijn herstelverhaal duidelijk op een rijtje hebben staan.<br/>
+Voor mezelf, maar vooral ook zodat ik hier effectief op kan terugkijken later.<br/>
+Mijn uiteindelijke doel is om ervaringsdeskundige te worden. Hiervoor wil ik volgend jaar de AD op Fontys in Eindhoven gaan doen over ervaringsdeskundigheid.</p>
+<p><strong>Welke verwachting heb ik van mijn coach?</strong></p>
+<p>Ik verwacht vooral van mijn coach duidelijkheid en richting.<br/>
+In die zin zie ik mijzelf als een redelijk persoon.<br/>
+Ik kom op voor mijn mening, maar laat mij een redelijk alternatief (of een duidelijk tegenargument) zien, en ik ben bereid om mijn mening/overtuiging te veranderen.<br/>
+Waarom ik dit aankaart: ik wil vooral dat de gaten in mijn logica, of misschien zelfs in het verhaal dat ik mezelf vertel, duidelijk worden.<br/>
+Dit zodat ik dichter naar de waarheid kan bewegen, over zowel mijn overtuigingen als mijn eigen verhaal.
+Concreet wil ik dat mijn coach mij:
+Vragen stelt over mijn verhaal waar ik zelf misschien niet aan gedacht heb.
+En laat reflectreren  over mijn onbewuste (gedachten)patronen.</p>
+<h1 id="bouwsteen-1"><strong>Bouwsteen 1</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h3 id="opdracht-1-beschrijf-in-je-eigen-woorden-iets-over-je-kwetsbaarheid-wat-geeft-het-je-en-wat-ontneemt-het-je"><strong>Opdracht 1: Beschrijf in je eigen woorden iets over je kwetsbaarheid. Wat ‘geeft het je’ en ‘wat ontneemt het je’?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-1-beschrijf-in-je-eigen-woorden-iets-over-je-kwetsbaarheid-wat-geeft-het-je-en-wat-ontneemt-het-je" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="wat-ontneemt-mijn-kwetsbaarheid-mij"><strong>Wat ontneemt mijn kwetsbaarheid mij?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#wat-ontneemt-mijn-kwetsbaarheid-mij" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Zoals al eerder benoemd, ben ik gediagnosticeerd met bipolaire stoornis type 2.<br/>
+Maar mijn kwetsbaarheid gaat verder dan deze diagnose.<br/>
+Ik ben bijvoorbeeld ook verslavingsgevoelig. Daarnaast ben ik van nature erg impulsief.</p>
+<p>Mijn kwetsbaarheid ontneemt me dan ook de mogelijkheid om dingen met mate te doen.<br/>
+Ik heb een alles-of-niets-mentaliteit.<br/>
+Dit gaat ver. zowel in activiteiten als in mijn zelfbeeld. Ik ben óf ‘goed’ óf ‘slecht’.</p>
+<p>Iets wat ik bijvoorbeeld wel zou willen doen, maar me afvraag of ik dat (op dit moment) aankan, is meerdere dagen naar een festival gaan.<br/>
+Ik hou van muziek en van mensen, maar soms raak ik zo overprikkeld dat ik vervolgens weer een hele tijd nodig heb om bij te komen.<br/>
+Dat wil ik graag voorkomen. Want door niet op mijn grenzen te letten, loop ik het risico op ontregeling.</p>
+<p>Maar ook in hoe anderen mij begrijpen: niet iedereen kan zich verplaatsen in de heftige reis die ik heb moeten afleggen. Met onderwerpen zoals:</p>
+<ul>
+<li>
+<p>Zelfmoordgedachten</p>
+</li>
+<li>
+<p>Verslaving</p>
+</li>
+<li>
+<p>Nihilisme</p>
+</li>
+<li>
+<p>Mijn eigen waarden baseren op iemand anders’ mening</p>
+</li>
+</ul>
+<p>Meestal begrijpen mensen dit soort dingen pas als ze het zelf ooit hebben ervaren.</p>
+<hr/>
+<h4 id="wat-geeft-mijn-kwetsbaarheid-mij"><strong>Wat geeft mijn kwetsbaarheid mij?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#wat-geeft-mijn-kwetsbaarheid-mij" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Doordat ik mijn rust heb moeten leren vinden tijdens manische periodes—wanneer het voelt alsof mijn hoofd gaat ontploffen—heb ik mezelf in extreem moeilijke situaties leren kalmeren.<br/>
+Wanneer ik nu gespannen, angstig of in paniek raak, weet ik mezelf tot op zekere hoogte te kalmeren. Omdat ik zwaardere dingen heb meegemaakt. Een soort vuurdoop.</p>
+<p>Ik heb ook moeten leren luisteren naar mijn eigen grenzen.<br/>
+Voor mijn eerste ontregeling was ik me niet eens bewust dat ik die had.<br/>
+Ik moest overal ‘ja’ op zeggen, want ik wilde niks missen.<br/>
+Maar door mijn kwetsbaarheid ben ik vaak genoeg tegen de muur aangelopen. Nu voel ik eerder aan wanneer ik rust moet nemen, of wanneer iets niet goed voor me is.</p>
+<p>Door mijn reis heb ik begrip gekregen voor het lijden van de mens.<br/>
+Menselijk lijden uit zich in eindeloos veel vormen.<br/>
+Ik bedoel dan vooral het lijden dat ontstaat in je eigen geest.</p>
+<p><strong>Voorbeeldje omtrent menselijk lijden:</strong><br/>
+Mijn buurvrouw zat heel ongeduldig te wachten bij haar voordeur op een pakketje.<br/>
+Ze verwachtte een PlayStation 5.<br/>
+Door mijn eigen inzichten (ik zocht het ook altijd buiten mezelf. Materialistische dingen of ervaringen zoals nieuwe videogames, psychedelische trips, illegale raves) vroeg ik haar uiteindelijk:<br/>
+“En wat als de PlayStation 6 uitkomt? Zit je hier dan weer?”</p>
+<p>Ik neem daarin niet een extremistische boeddhistische houding aan van: <em>“Verlangen is lijden.”</em><br/>
+Ik zie in dat af en toe een videogame spelen leuk is. Of dat het genot van rijden in een nieuwe auto plezier kan geven.<br/>
+Waar ik haar op probeerde te wijzen is: het is maar tijdelijk.<br/>
+Uiteindelijk moet je weer iets nieuws hebben om je bezig te houden.<br/>
+En misschien ben je nu ongelukkig omdat je dat ‘iets’ niet hebt.<br/>
+Dat is een stukje materialisme dat veel voorkomt tegenwoordig. Sterker nog: het wordt aangemoedigd.<br/>
+Het is immers goed voor de economie, constant nieuwe dingen moeten kopen.</p>
+<p><strong>Waarom kan ik haar dit stukje (proberen te) geven?</strong><br/>
+Omdat ik er zelf zo mee heb gezeten.<br/>
+Ik heb het pad bewandeld dat zij nu bewandelt.<br/>
+Ik ben eindeloos bezig geweest om een andere manier te vinden.</p>
+<p>Dus dát biedt mijn kwetsbaarheid mij: een stukje begrip.<br/>
+Of het nou verlangen, zelfbeeld of negatieve spiralen zijn, dat maakt niet uit.<br/>
+Ik weet hoe het is om je eigen ergste vijand te zijn.<br/>
+Ik weet hoe het is om de persoon in de spiegel te haten.</p>
+<p>Ik ben dan ook ondenkbaar dankbaar voor mijn kwetsbaarheid.<br/>
+Het feit dat mijn kwetsbaarheid me stil heeft moeten laten staan bij mezelf.<br/>
+Dat ik bewust ben moeten gaan nadenken over wie ik ben—en belangrijker: wie ik wil zijn.<br/>
+Zonder mijn kwetsbaarheid was mijn pad heel anders geweest.</p>
+<hr/>
+<h3 id="opdracht-2-is-je-beeld-over-je-kwetsbaarheid-en-de-invloed-daarvan-op-je-leven-in-de-loop-van-de-tijd-veranderd"><strong>Opdracht 2: Is je beeld over je kwetsbaarheid en de invloed daarvan op je leven in de loop van de tijd veranderd?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-2-is-je-beeld-over-je-kwetsbaarheid-en-de-invloed-daarvan-op-je-leven-in-de-loop-van-de-tijd-veranderd" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="hoe-dacht-ik-in-het-begin-over-mezelf-en-mijn-kwetsbaarheid"><strong>Hoe dacht ik in het begin over mezelf en mijn kwetsbaarheid?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hoe-dacht-ik-in-het-begin-over-mezelf-en-mijn-kwetsbaarheid" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Ik heb heel lang met mezelf geworsteld—met het feit dat ik anders was dan anderen.<br/>
+En tuurlijk, niemand is hetzelfde.<br/>
+Maar bepaalde trekjes maken mij tot wie ik ben.<br/>
+Nadenken over dingen. Zoals anderen zouden zeggen: “diepe” vragen stellen, “diepe” onderwerpen bespreken.</p>
+<p>Ik vind dat niet helemaal eerlijk.<br/>
+Waarom zou er een onderscheid moeten zijn tussen ‘diepe’ en ‘oppervlakkige’ vragen?<br/>
+Lange tijd werd daar op me neergekeken. Mensen vonden me maar vreemd.</p>
+<p>Uiteindelijk ga je je dan aanpassen. Of je afvragen of ze gelijk hebben.<br/>
+En ze hebben ergens een punt.<br/>
+Als ik niet eens een koffietje kan drinken zonder na te denken over filosofische stromingen of soortgelijke onderwerpen, kun je dan nog wel relaxen?</p>
+<p>Maar ik vind dat soort dingen leuk om te doen.<br/>
+Ik vind het mooi om de grens van mijn begrip te raken—en er vervolgens voorbij te groeien.</p>
+<p>In die zin heb ik mijn mensen nog niet echt gevonden.<br/>
+Ik heb één vriend die het enigszins leuk vindt om daarin mee te gaan.<br/>
+En misschien kan ik van hem ook leren om het soms los te laten.</p>
+<p><strong>Als concreet antwoord op de vraag:</strong><br/>
+Vroeger dacht ik dat ik vreemd was, omdat niemand mij begreep.<br/>
+Uiteindelijk ben ik gestopt met mezelf uitleggen, omdat niemand de tijd nam om echt naar me te luisteren.</p>
+<hr/>
+<h4 id="hoe-zit-het-met-mijn-zelfbeeld-door-mijn-herstel-heen"><strong>Hoe zit het met mijn zelfbeeld door mijn herstel heen?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#hoe-zit-het-met-mijn-zelfbeeld-door-mijn-herstel-heen" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Ik heb altijd een heel laag zelfbeeld gehad.<br/>
+Ik deed alsof ik erg zelfverzekerd was, maar dat was niets meer dan een masker.<br/>
+En dat uitte zich in arrogantie.<br/>
+Een beetje: <em>“Degene die het hardst schreeuwt, is het meest onzeker.”</em></p>
+<p>Nou, ik heb vóór mijn eerste ontregeling keihard lopen schreeuwen, dat kan ik je vertellen.</p>
+<p>Wat er toen gebeurde bij mijn eerste ontregeling (middelengeïnduceerde psychose) was dat dat masker eraf werd gerukt.<br/>
+Iedereen zag opeens dat kleine, onzekere jongetje dat eronder schuilde.<br/>
+Van daaruit raakte ik depressief en kreeg ik suïcidale gedachten.<br/>
+De hele wereld had me gezien zoals ik écht was: kapot.</p>
+<p>Uiteindelijk heb ik moeten leren om voor mezelf te leven.<br/>
+Steeds kwam de gedachte bij me op:<br/>
+<em>“Als ik dát heb overleefd, dan komt dit ook wel goed.”</em></p>
+<p>Je kijkt uiteindelijk terug, en dan zie je onweerlegbaar bewijs:<br/>
+Als je je inzet, kun je de grootste bergen beklimmen, met één stap tegelijk.</p>
+<p>Dat geeft me een échte vorm van zelfvertrouwen.<br/>
+Een zelfvertrouwen dat uit mij komt. Niet uit de meningen van anderen.</p>
+<hr/>
+<h4 id="labeltje"><strong>Labeltje</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#labeltje" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Ik ben door de jaren heen mijn diagnose meer als een labeltje gaan zien.</p>
+<p>Ja, het feit dat ik bipolaire stoornis type 2 heb, zegt iets over mij als persoon.<br/>
+Maar vóór en nádat ik dat labeltje kreeg, is de ervaring van hoe het is om ‘mij’ te zijn niet veranderd.<br/>
+Mijn innerlijke wereld verandert niet op basis van dat label.</p>
+<p><strong>Waarvoor is dat label dan wél nuttig?</strong></p>
+<p>Dat labeltje is wél nuttig omdat ik dingen beter kan plaatsen.<br/>
+Ik kan onderzoek doen naar mijn specifieke kwetsbaarheid en meer orde creëren in mijn innerlijke wereld, op basis van wat werkt voor anderen met dezelfde kwetsbaarheid.</p>
+<p>Ook kunnen geestelijke gezondheidsprofessionals beter aansturen door het labeltje dat ze hebben gegeven.<br/>
+Zo kunnen ze specifieke hulpmiddelen of therapieën aanbieden die inspelen op mijn kwetsbaarheid.</p>
+<p>Maar zover als dat labeltje gaat: ik laat me niet in het hokje ‘bipolaire stoornis type 2’ plaatsen.<br/>
+Ja, ik heb die diagnose.<br/>
+Maar ik ben ook zó oneindig veel meer dan die diagnose.</p>
+<h1 id="bouwsteen-2-hulpverlening"><strong>Bouwsteen 2 Hulpverlening</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-2-hulpverlening" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="opdracht-1-op-welke-manier-ben-jij-voor-het-eerst-in-aanraking-gekomen-met-hulp"><strong>Opdracht 1: Op welke manier ben jij voor het eerst in aanraking gekomen met hulp?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-1-op-welke-manier-ben-jij-voor-het-eerst-in-aanraking-gekomen-met-hulp" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Voor mijn eerste psychose had ik al het gevoel dat er iets misging.<br/>
+Ik kwam toen terecht bij een afdeling voor verslavingszorg vanwege mijn ketamineverslaving. Maar ik nam dit totaal niet serieus en ben na twee afspraken simpelweg niet meer komen opdagen. Daardoor kreeg mijn verslaving volledig vrij spel. Ik gebruikte zonder enige rem.</p>
+<p>Uiteindelijk, drie tot zes maanden nadat ik was gestopt met het bijwonen van die therapie-afspraken, kreeg ik een middelengeïnduceerde psychose door twee zegels LSD.<br/>
+Dat was echt heel heftig. Op een gegeven moment zette ik een mes op mijn buik, dat mijn moeder uit mijn handen heeft moeten worstelen.<br/>
+Ik ben die avond vertrokken uit het huis van mijn moeder, met de overtuiging dat ik die nacht zelfmoord zou plegen.</p>
+<p>Ik had al die tijd mijn zelfbeeld zo hoog gehouden naar de buitenwereld toe. Maar zoals eerder genoemd, werd dat masker erdoor deze gebeurtenis keihard afgerukt.<br/>
+Iedereen zag me opeens voor wat ik werkelijk was: bang en onzeker.<br/>
+De perceptie van anderen leek zo veranderd, dat ik ervan overtuigd raakte dat ik moest verdwijnen.<br/>
+Dat ik het idee had dat mijn omgeving dit ook van mij verwachtte.<br/>
+Het voelde als de enige logische uitweg</p>
+<p>Thuis probeerde ik dit ook.<br/>
+Ik zette een mes op mijn arm, maar het was te bot om echte schade aan te richten.<br/>
+Na twee dagen wakker te zijn geweest, viel ik uiteindelijk in slaap.</p>
+<p>Rond zes uur ‘s ochtends klopte iemand op mijn deur. Het was mijn moeder.<br/>
+Ze nam me mee naar het ziekenhuis. Daar zagen ze al snel dat het écht niet goed met me ging.<br/>
+Ik werd toen doorverwezen naar een crisisopname.<br/>
+Daar kreeg ik mijn eerste ‘echte’ hulp.</p>
+<hr/>
+<h2 id="opdracht-2-kun-je-beschrijven-wat-deze-hulp-voor-jou-betekent-of-heeft-betekend"><strong>Opdracht 2: Kun je beschrijven wat deze hulp voor jou betekent of heeft betekend?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-2-kun-je-beschrijven-wat-deze-hulp-voor-jou-betekent-of-heeft-betekend" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Wat me in mijn eerste team zo dwarszat, was dat er niets echt werd aangepakt.<br/>
+Het voelde alsof er alleen maar aan de blaadjes werd gesnoeid, terwijl ik juist aan de wortels wilde werken.</p>
+<p>Ik verlangde naar specifieke therapie, al wist ik nog niet precies in welke vorm. Wat ik in plaats daarvan kreeg, waren stukjes groepstherapie. Ik kwam terecht tussen mensen die ook met verslaving kampten.<br/>
+Voor die therapie moest ik drie maanden nuchter zijn. En dat werd ik ook.<br/>
+Maar na die drie maanden begon ik weer met drinken — wat uiteindelijk weer leidde tot gebruik.</p>
+<p>Toch denk ik dat de verslavingstherapie me heeft laten inzien dat ik écht een probleem had, ook al wilde ik dat nog niet onder ogen zien.</p>
+<p>Wat ik uitermate frustrerend vond, was dat mijn wanen als wanen werden gezien.<br/>
+Als ik dacht dat iemand me belachelijk aan het maken was, werd dat meteen afgedaan als ‘je psychose’.<br/>
+Voor mij voelde het echter als realiteit.</p>
+<p>Later kwam ik terecht bij een ander team, gericht op jeugdigen.<br/>
+Ik weet nog dat ik heel lang op de wachtlijst stond.<br/>
+Toen ik uiteindelijk een intake had, zei ik dat ik eigenlijk niet wist waar ik aan wilde werken, of er überhaupt nog iets was om aan te werken. Maar dat ik het zonde vond om zo lang op een wachtlijst te staan, en dan geen gebruik te maken van de hulp wanneer ik aan de beurt was.</p>
+<p>Bij dit nieuwe team kreeg ik mijn tweede psychose. Toen heb ik zelf (mede)besloten dat een opname misschien wel gepast was, omdat ik redelijk onstabiel was.<br/>
+Ik zei wel dat ik niet naar dezelfde opnameplek wilde als de eerste keer — dat was echt geen prettige plek.<br/>
+Dus werd het deze keer een open opname in plaats van een gesloten.</p>
+<p>Mijn casemanager deed echt moeite om me te begrijpen.<br/>
+En hoewel ik vrijwel zeker weet dat er eerder ook mensen zijn geweest die dat geprobeerd hebben, voelde ik het deze keer echt.<br/>
+Het gaf me ruimte om samen met iemand naar mijn gedachten en processen te kijken.<br/>
+Eerst deed ik dat altijd alleen, nu keek er iemand mee van buitenaf.<br/>
+Iemand die dingen kon zien die ik misschien miste, omdat ik er middenin zat.</p>
+<p>Ik denk niet dat mijn casemanager ooit volledig zal begrijpen wat voor impact die persoon op mij heeft gehad.</p>
+<hr/>
+<h2 id="opdracht-3-ga-je-nu-anders-om-met-hulp-dan-vroeger"><strong>Opdracht 3: Ga je nu anders om met hulp dan vroeger?</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-3-ga-je-nu-anders-om-met-hulp-dan-vroeger" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Absoluut.</p>
+<p>Waar ik eerst opereerde vanuit schaamte en mijn trots hooghield, moest ik dat tijdens mijn tweede opname loslaten.<br/>
+Ik heb alles op tafel gelegd, alle shit waarvan ik dacht dat het niet klopte, alles wat ik had gedaan in mijn verslaving.</p>
+<p>En het gekke is: ik ben erachter gekomen dat schaamte houdt van het donker.<br/>
+Op het moment dat ik bespreek waarvoor ik me schaam, hoe diep het ook zit, verliest het bijna alle macht over me.<br/>
+Wanneer ik schaamte in het licht zet, verdwijnt die.<br/>
+In die zin is het ontzettend helend om te praten over je schaamte.</p>
+<p>Waar ik vroeger dacht dat ik een slecht mens zou zijn als ik iets zou delen over mijn fouten of schaamte, heb ik moeten leren dat mensen genuanceerd zijn.<br/>
+Niet ‘goed’ of ‘slecht’.<br/>
+Ik mag fouten maken.<br/>
+Het is oké om dat te doen.<br/>
+Sterker nog: het is goed om te accepteren dat ik imperfect ben.<br/>
+Imperfectie maakt ons menselijk.</p>
+<p>Ik ben hulp uiteindelijk gaan zien als elk ander medisch beroep.<br/>
+Ik ga ook niet naar de huisarts met de intentie om te verbergen waar het pijn doet.<br/>
+Dat zou het voor de huisarts alleen maar moeilijker maken om mij te helpen.<br/>
+En dan duurt het ook langer voordat ik grip krijg op mijn problemen.</p>
+<p>Maar dat heeft tijd nodig. Tijd om een band op te bouwen met je behandelaar.</p>
+<p>Ook speelt zelfsturing een grote rol.<br/>
+Ik lees zelf veel over mentale gezondheid.<br/>
+Als ik denk dat iets mij zou kunnen helpen, een specifieke therapie bijvoorbeeld, dan is het aan mij om dat aan te geven.<br/>
+Meewerken met de hulp dus, in plaats van ertegen te vechten.</p>
+<h1 id="bouwsteen-3-rollen"><strong>Bouwsteen 3 Rollen</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-3-rollen" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="opdracht-1-beschrijf-de-betekenis-van-je-rollen-in-het-verleden-en-in-het-heden-en-beschrijf-daarbij-welke-wensen-je-hebt-met-betrekking-tot-rollen"><strong>Opdracht 1</strong>: Beschrijf de betekenis van je rollen in het verleden en in het heden. En beschrijf daarbij welke wensen je hebt met betrekking tot rollen?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-1-beschrijf-de-betekenis-van-je-rollen-in-het-verleden-en-in-het-heden-en-beschrijf-daarbij-welke-wensen-je-hebt-met-betrekking-tot-rollen" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Ik heb me in mijn puberteit en in mijn vroege jeugd opgesteld als een zorgeloos kind.<br/>
+Mijn problemen waren er niet. Als ik het had over mijn problemen werd dit niet altijd gewaardeerd door mijn omgeving. Of dit nu familie of vrienden waren.<br/>
+Ze zagen liever niet dat ik aan het worstelen was met mezelf. Ze vonden dit vaak zelfs vervelend. Dat ik altijd “diep” moest gaan. Uiteindelijk heb ik dit deel van mij dan ook onderdrukt.<br/>
+Ik was zorgeloos. Althans, zo deed ik mezelf voor.</p>
+<p>Ik hield van raven. Illegale techno of psytrance feesten. Dat is wie ik was. Daar leefde ik voor.<br/>
+Dat is de versie van mij die mensen leuk vonden. Keihard losgaan de hele avond.<br/>
+Ik had een versie gevonden die mensen accepteerden.<br/>
+Zelfs naar opkeken.</p>
+<p>Ik heb me altijd geïdentificeerd met het jong zijn. Ik zou maar 1 keer jong zijn, en ik zou daar gebruik van maken.</p>
+<p>Later, na mijn eerste ontregeling, brak dit masker.</p>
+<p>Ik dacht opeens heel veel na, en liet dit ook merken aan mijn omgeving.<br/>
+Dit ging echter te ver de andere kant op. Ik kon niet meer van het leven genieten.</p>
+<p>Ik heb nu beide kanten (enigszins) onder controle.<br/>
+Ik kan de diepgang ingaan, maar ook zorgeloos plezier hebben, zoals ik dat vroeger deed.</p>
+<h1 id="opdracht-2-welke-verwachtingen-en-eisen-stelde-de-omgeving-en-welke-verwachtingen-en-eisen-stelde-je-zelf-en-welke-verwachtingen-en-eisen-zijn-ernu"><strong>Opdracht 2</strong>: Welke verwachtingen en eisen stelde de omgeving en welke verwachtingen en eisen stelde je zelf? En welke verwachtingen en eisen zijn er nu?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-2-welke-verwachtingen-en-eisen-stelde-de-omgeving-en-welke-verwachtingen-en-eisen-stelde-je-zelf-en-welke-verwachtingen-en-eisen-zijn-ernu" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Welke verwachtingen en eisen stelde mijn omgeving?</strong></p>
+<p>Zoals ik al eerder aangaf, vond mijn omgeving het niet leuk als ik diep nadacht. Mijn omgeving wou (naar mijn beleving) dat ik een vrolijk(e) kerel(tje) was.<br/>
+Ze hadden geen zin in mijn depressieve gedachten, mijn existentiële crisissen of zelfs mijn gedachten over de dood.<br/>
+De uitzondering hierin was mijn moeder.</p>
+<p><strong>Welke eisen stelde ik zelf?</strong></p>
+<p>Mensen moesten me leuk vinden, omdat ik deze waardering niet van mezelf kreeg.<br/>
+Mijn eigenwaarde was gebaseerd op wat anderen van mij en mijn acties vonden, niet wat ik er zelf van vond. Ik leefde voor een ander. Dit heeft ervoor gezorgd dat ik dingen heb gedaan waar ik het zelf (eigenlijk) niet eens mee was. Na mijn eerste psychose, kon ik mezelf dan ook niet meer in de spiegel aankijken. Ik was mezelf kwijtgeraakt in de eindeloze zoektocht naar de goedkeuring van een ander.</p>
+<p><strong>Welke verwachtingen en eisen zijn er nu?</strong></p>
+<p>Ik leef meer naar mijn eigen normen en waarden toe. Dit komt vooral omdat ik de angst om alleen te zijn heb losgelaten. Ik ben altijd in verbinding met alles om mij heen, ook al zit ik in mijn eentje op een verre planeet. Sinds ik dat begrijp, ben ik meer comfortabel met “alleen” te zijn. Wie wilt blijven in mijn leven, krijgt alle ruimte om dat te doen. Als ik zelf iemand belangrijk vind in mijn leven, krijgen ze dat van me te horen.<br/>
+Maar ik ga <strong>niet</strong> meer mezelf veranderen alleen om te zorgen dat iemand blijft.<br/>
+Natuurlijk, we leven samen met z’n allen, en ik zal ook echt niet de moeilijkste zijn als je een redelijk verzoek doet. Maar mijn eigen normen en waarden aan de kant zetten zodat iemand anders in mijn leven blijft? Dat doe ik niet nog een keer. Ik ga dood voordat ik dat weer laat gebeuren.<br/>
+Dan zou ik tenminste nog in mijn laatste momenten tevreden kunnen zijn dat ik mezelf niet nog een keer in de steek heb gelaten.</p>
+<p><strong>Waarom houd ik mij dan toch vast aan die zorgeloze jongen</strong>?<br/>
+Omdat hij ook een plek heeft. Ik wil hem niet kwijtraken door het rationaliseren, filosoferen en alles wat er om heen komt.<br/>
+De zorgeloze ik, kan ik vaak mee lachen, heb ik avonden mee die ik voor altijd met mij meedraag. Momenten die ik koester met anderen. Er zit zelfs een stukje hoop in. Hoop dat het eigenlijk allemaal niet zoveel uitmaakt. Dat ik simpelweg kan zijn, en dat dat dan ook al genoeg is.</p>
+<h1 id="bouwsteen-3-rollen-1">Bouwsteen 3 Rollen<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-3-rollen-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="voorwoord">Voorwoord<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#voorwoord" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Voordat ik deze vragen beantwoord wil ik eerst iets duidelijk maken, omdat het (toch) door deze vragen gaat lopen, neem ik liever de tijd om dit structureel te illustreren.</p>
+<p>De vragen van deze bouwsteen gaan over bronnen van steun. Dat zijn meerde vormen geweest, maar een hiervan is duidelijk mijn grootste bron van steun geweest:</p>
+<p>Mijn moeder. Ik vind het zelfs moeilijk om in woorden een beeld te schetsen van hoe ontzettend veel mijn moeder voor mij heeft betekend.</p>
+<p>Ik ben (ik schrijf dit met het risico om mezelf <strong>heel zielig</strong> te laten klinken) opgegroeid in een disfunctioneel gezin.<br/>
+Ja, geen enkel gezin is perfect.<br/>
+Maar naarmate ik ouder word en meer afstand krijg van mijn opvoeding, zie ik steeds duidelijker dat die niet gezond was en, eerlijk gezegd, soms zelfs ronduit gevaarlijk.</p>
+<p>Er waren 2 “teams”.<br/>
+Team mama en team papa.<br/>
+Ik ben de enige zoon van mijn vader, en hij heeft mij dan ook met een andere instelling opgevoed dan mijn zussen.<br/>
+Jongens moesten stoer zijn, en van stoeien houden.<br/>
+Als hij langs mij liep en elke keer een tik op mijn achterhoofd gaf, was dit niet onjuist, maar simpelweg hoe jongens met elkaar omgingen.<br/>
+(Ik heb hierdoor overigens tot mijn 18e altijd een reflex gehad dat wanneer iemand achter mij langs liep, ik fysiek schrok.)<br/>
+Nu komt dus het vervelende van mijn mindset, ik neem het pap niet kwalijk dat hij zo met mij is omgegaan.<br/>
+Is het juist?<br/>
+Nee, in mijn ogen niet.<br/>
+Maar deed pap dit bewust? Zou hij dit ook hebben gedaan als hij wist wat voor impact het op mij had/zou hebben? Ik denk het niet.<br/>
+Mijn vader is zelf op een manier opgevoed. Stukje cultuur, stukje aangeleerde mindset.<br/>
+Long story short, hij weet niet beter.<br/>
+In die zin was het makkelijker toen ik nog kon denken “Pap is een arrogante klootzak”.<br/>
+Maar hoe ouder ik word, hoe meer ik zie dat hij het op zijn eigen manier, ook zwaar heeft met zichzelf.</p>
+<p>Anyways, genoeg over jeugdtrauma, terug naar mijn punt.</p>
+<p>Wie was degene die het in die tijd voor mij opnam? Als pap “grappig” probeerde te zijn, ten koste van zijn zoon?</p>
+<p>Mijn moeder. Mijn moeder heeft altijd, maar dan ook echt <strong>altijd</strong> mijn rug gehad.<br/>
+Misschien is het soms niet zo gelopen zoals zij bedoeld had, maar de intentie van mijn moeder is altijd puur geweest.</p>
+<p>En wat mijn hart dan ook breekt, is hoeveel shit ik haar doorheen heb laten gaan.<br/>
+Ronduit gemeen doen tegen mijn moeder.<br/>
+Niet omdat ik boos was op haar, maar omdat ik in pijn leefde.<br/>
+Omdat ik niet door het trauma heen kon, en wou werken.</p>
+<p>Dat mijn moeder me keer op keer heeft moeten zien aftakelen, slechte keuzes moeten hebben zien maken.<br/>
+Dat ik ondertussen ergens heel goed begrijp <strong>waarom</strong> ze zich zoveel zorgen heeft gemaakt al die tijd. Omdat ik echt een slechte kant op ging.</p>
+<p>Toen ik zelf de hoop had opgegeven tijdens mijn eerste opname, was het mam die me het vertrouwen gaf dat het ooit wel weer goed zou komen.<br/>
+Dat toen ik de hoop had opgegeven op mezelf, mam dit nooit heeft gedaan.<br/>
+Toen ik niet genoeg kracht had om mezelf te dragen, droeg mam ons beiden.</p>
+<p>Ik zal mijn leven proberen deze schuld terug proberen te betalen.<br/>
+Ook al weet ik dat ze dat niet verwacht. Ook al weet ik dat ik dat nooit zal <strong>kunnen</strong> terugbetalen.</p>
+<p>En zelfs met al deze woorden, dit hele stuk tekst, voel ik alsnog dat de woorden er niet genoeg voor zijn om mijn liefde en dankbaarheid aan mijn moeder duidelijk te maken.</p>
+<p>In die zin gaat mijn liefde voor mijn moeder veel verder dan woorden.<br/>
+Misschien gaat alle echte liefde dat wel.</p>
+<h2 id="opdracht-1-wat-is-steun-geweest-voor-jou-en-wat-is-was-daar-voor-nodig">Opdracht 1: Wat is steun (geweest) voor jou en wat is (was) daar voor nodig?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-1-wat-is-steun-geweest-voor-jou-en-wat-is-was-daar-voor-nodig" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Ik heb me heel lang niet gehoord gevoeld. Onbegrepen. Dat mijn ervaring er niet tot deed.<br/>
+De grote verandering die dan ook heeft plaatsgevonden is toen mijn casebehandelaar die me behandelde tijdens mijn 2de opname, oprecht de tijd voor me nam.<br/>
+Het maakte niet uit met wat voor een onderwerpen ik naar haar toe kwam, ze luisterde.<br/>
+Ze behandelde me met respect en empathie. Ze zag me als een gelijke. Niet als een client/patiënt (of whatever de tegenwoordige “correcte” benaming is voor iemand in behandeling van de psychiatrie).<br/>
+Zij is, eigenlijk, de eerste persoon in een lange tijd die weer <strong>echt</strong> de tijd nam om naar me te luisteren.<br/>
+Ik was enigszins gestopt met mezelf uit te leggen, mensen begrepen me toch nooit.<br/>
+De <strong>meeste</strong> mensen raakte alleen maar geïrriteerd als ik over onderwerpen begon die ze als “diep” beschouwden. “Wat boeit het” “hou je daar niet zoveel mee bezig” waren zinnen die mijn dagelijkse kost waren.<br/>
+Dus na eenmaal te merken dat mijn casebehandelaar, daadwerkelijk bleef om te luisteren.<br/>
+Dat het niet uitmaakte of ik er 5 minuten over deed om mezelf uit te leggen of bij wijze van onze hele afspraak.<br/>
+Toen dat eenmaal duidelijk werd, begon ik mezelf dus ook meer toe te lichten.<br/>
+En zo werd ik er ook steeds beter in.</p>
+<p>Concreet:</p>
+<p>Wat is steun geweest voor mij?<br/>
+Het idee krijgen dat mijn ervaring geldig was, hoe vreemd sommige mensen deze ook vonden (destijds)</p>
+<p>Wat is daarvoor nodig geweest?<br/>
+Het idee hebben dat er naar me geluisterd werd.</p>
+<h2 id="opdracht-2-wat-doe-je-kun-je-doen-op-een-moment-dat-je-steun-nodig-hebt-zowel-richting-anderen-als-jezelf">Opdracht 2: Wat doe je, kun je doen, op een moment dat je steun nodig hebt? Zowel richting anderen als jezelf?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-2-wat-doe-je-kun-je-doen-op-een-moment-dat-je-steun-nodig-hebt-zowel-richting-anderen-als-jezelf" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Richting mezelf</strong><br/>
+Nou. Als ik naar mijn eigen situatie kijk (bipolaire stoornis), zie ik als ik kijk naar wat ik zelf doe, hoe ik met mezelf omga, niet per se als “steun”.<br/>
+Ik zie het meer als zelfbescherming.<br/>
+Als ik overprikkeld word (of dat de spanning hoger oploopt om te ontregelen), bescherm ik mijzelf hierin.<br/>
+Ik plan bewust een rustige avond in. Als ik maar blijf doorrennen (en dit deed ik tot een aantal maanden geleden vrijwel altijd) is de kans dat ik <strong>echt</strong> ontregel een stuk groter.<br/>
+Als ik de tijd neem om tot rust te komen, dan komt het vaker dan niet echter goed.<br/>
+De vereiste hierin is echter dat ik het kan signaleren in mezelf wanneer de spanning oploopt.</p>
+<p><strong>Naar mijn omgeving toe</strong><br/>
+Voor mijn eigen ontwikkeling, is toen ik me heb leren uitspreken naar mijn omgeving wat het vuur ontdekken voor de holbewoners moet zijn geweest.<br/>
+Dat is dan ook wat ik doe, als ik mij minder voel, voel dat spanningen oplopen, of welke andere manier mijn hoofd het me soms moeilijk maakt.<br/>
+Ik spreek mij uit naar mijn omgeving. Bij mensen wie ik vertrouw.<br/>
+Dit is tot nu toe grotendeels begeleiding, mensen die in de ggz werken om een luisterend oor te bieden.<br/>
+Dit zal ik uiteindelijk ook in mijn eigen sociale cirkels moeten hebben (althans, dat wil ik zelf).</p>
+<p>Opdracht 3: Beschrijf waar jij de kracht, moed en hoop vandaan haalt en hebt gehaald om door te gaan.</p>
+<p>Ik heb hier zojuist een heel stuk tekst over geschreven, waarmee deze vraag in een woord te beantwoorden valt: Mam.</p>
+<p><strong>Maar als je aan mij vraagt wanneer het omslagpunt was?</strong><br/>
+Toen ik <strong>zelf</strong> begon te geloven dat de teringzooi (excuse my language) die ik van mijn leven had gemaakt niet meer zo <strong>hoefde</strong> te zijn.<br/>
+Dat ik een keuze had. Dat ik die altijd al had gehad.<br/>
+Dat het anders kon zijn als ik dat wilde, maar ik moest er wel zelf moeite voor doen.<br/>
+Niet alles in een keer. Elke dag een beetje. Elke dag consistent voor een beter leven kiezen.<br/>
+Gezonder eten. Meer bewegen. Meer lezen. <strong>Nuchter blijven</strong>.<br/>
+Als ik het een dag niet lukte, dan pakte ik het de volgende dag weer op.<br/>
+Ik ging niet (meer) mezelf afstraffen als het een dag niet lukte.<br/>
+Gister was klote. Boeie. Ik probeer het vandaag gewoon weer opnieuw.<br/>
+Het moment dat dit (het besef dat ik invloed had op mijn leven en keuzes) gebeurde was niet het moment dat ik nuchter werd.<br/>
+Sterker nog, het moment dat ik deze hoop ervaarde, zat ik diep in een coke binge.<br/>
+Maar er is toen wel iets bewogen in mij.<br/>
+Iets is die avond en  in gang gezet.<br/>
+In mijn ogen, is dat ook de avond waar mijn herstel <strong>echt</strong> is begonnen.<br/>
+Ook al had ik sinds dat moment nog 2 jaar lang gebruikt.</p>
+<p>Maar die avond, is de avond waarop ik ophield slachtoffer te zijn, en het roer overnam als kapitein van mijn eigen schip.</p>
+<h1 id="bouwsteen-5-eigen-oplossingen-en-valkuilen"><strong>Bouwsteen 5 Eigen oplossingen en valkuilen</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-5-eigen-oplossingen-en-valkuilen" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="opdracht-1-voor-welke-situaties-of-gebeurtenissen-moet-ik-oppassen">Opdracht 1: Voor welke situaties of gebeurtenissen moet ik oppassen?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-1-voor-welke-situaties-of-gebeurtenissen-moet-ik-oppassen" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Ik moet oppassen dat ik mezelf niet voorbij ren, dat ik niet blijf doorgaan zonder stil te staan en te voelen hoe het echt met me gaat.</p>
+<p>Ik moet oppassen dat ik mijn grenzen bewaak en niet toestaat dat anderen er overheen gaan uit angst dat ze me anders verlaten.</p>
+<p>Ik moet oppassen dat ik niet te lang het goede in iemand blijf zien, waardoor zij fouten kunnen maken die ik absoluut niet oké vind.</p>
+<h2 id="opdracht-2-welke-hulp--en-overlevingsstrategie-heb-ik-ontwikkeld">Opdracht 2: Welke hulp- en overlevingsstrategie heb ik ontwikkeld?<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#opdracht-2-welke-hulp--en-overlevingsstrategie-heb-ik-ontwikkeld" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Ik ben veel bewuster geworden van wat er in mijn binnenwereld gebeurt. Ik merk vroegtijdig op wanneer ik gespannen ben en kan daardoor op tijd schakelen om te voorkomen dat het erger wordt.</p>
+<p>Als ik het te laat merk en al enigszins ontregeld ben, helpt meditatie mij om weer tot rust te komen.</p>
+<p>Als ik echt zwaar ontregeld ben, kan ik niet meer goed mediteren en moet ik me simpelweg richten op mijn ademhaling.</p>
+<p>Wanneer ik voel dat ik in een dipje raak, ga ik hier bewust mee om. Ik neem dan tijd voor mezelf. Ik steek wierrookjes aan en drink thee, zodat ik weer de rust in mezelf kan vinden.</p>
+<p>Ik draag littekens van mijn oude leven mee. Ik heb zware vertrouwensproblemen en moeite met fysieke intimiteit. Ik weet dat ik door deze moeilijkheden heen zal moeten, maar besef ook dat dat niet in één keer gebeurt, maar in kleine stappen.</p>
+<p>Een tijd geleden heb ik voor het eerst een meisje mijn nummer gegeven. Uiteindelijk bleek zij lesbisch te zijn. Je kunt dan verdrietig worden of jezelf zelfs schamen omdat je dacht dat ze je zag zitten.</p>
+<p>Maar ik was juist blij en trots. Niet omdat zij lesbisch was, maar omdat ik mijn angst had overwonnen door haar mijn nummer te geven.</p>
+<p>Op de grote schaal maakt het niet uit of het meisje mijn nummer wilde, maar het maakt wel uit voor de richting waarin ik ga.</p>
+<p>Het gaat er niet om of iemand je nummer aanneemt, maar om het feit dat je iemand durft te benaderen en je angsten probeert te overwinnen, ook al tril je terwijl je het doet.</p>
+<h1 id="bouwsteen-6-stigma"><strong>Bouwsteen 6 Stigma</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-6-stigma" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Opdracht 1: Welke ervaring heb jij met stigma’s?</strong></p>
+<p>Ik heb relatief weinig ervaring met stigma’s, ondanks een serieuze diagnose. Soms heb ik meegemaakt dat mensen over mij oordelen vanwege mijn diagnose, maar ik laat dat mijn zelfbeeld niet beïnvloeden. Voor mij is een diagnose niets meer dan een label. Ik hecht er geen waarde aan, behalve dat het ervoor zorgt dat iemand mij beter kan begrijpen en ik gerichte hulp kan krijgen.</p>
+<p>Het label verandert niets aan mijn persoonlijke beleving van het bestaan. Als iemand oordeelt over mij vanwege het label dat ik heb, confronteer ik die persoon ermee. Als die persoon openstaat voor een gesprek, leg ik vaak uit waarom dat oordeel niet alleen nutteloos is, maar meestal ook geen enkele basis heeft in de werkelijkheid.</p>
+<p><strong>Opdracht 2: Welke stigma’s heb jij zelf overgenomen van anderen in de manier waarop je naar jezelf kijkt? Welke hinder ondervind je hieraan? Hoe ga je hier mee om?</strong></p>
+<p><strong>Geen.</strong></p>
+<h1 id="bouwsteen-7-toekomst"><strong>Bouwsteen 7 Toekomst</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#bouwsteen-7-toekomst" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p><strong>Opdracht 1: Hoe zie je je toekomst en waar droom je van?</strong></p>
+<p>Ik zie mijn toekomst als een pad dat ik blijf volgen, al weet ik nog niet precies welke richting dat pad zal nemen. Voor mij maakt dat eigenlijk niet zoveel uit. Of ik nu vandaag mijn spullen zou inpakken om de rest van mijn leven rond te reizen, of uiteindelijk kies voor een kantoorbaan in de ICT, beide paden zijn goed. Wat voor mij het belangrijkst is, is dat ik open blijf staan om te leren, te reflecteren en mijn inzichten met anderen te delen.</p>
+<p>Mijn droom is om, in welke vorm dan ook, de wereld een stukje mooier te maken. Een wereld waarvan ik weet dat zij kan bestaan. Soms is het grootste wat je als mens kunt doen, eenvoudigweg de hoop niet opgeven. Wanneer je mensen ontmoet die door het leven koud of bitter zijn geworden, en die proberen jou datzelfde gevoel te geven, is het meest moedige wat je kunt doen begrijpen waar dat vandaan komt en vervolgens bewust kiezen om er niet in mee te gaan. In plaats daarvan wil ik trouw blijven aan mijn waarden en bijdragen aan een warmere en menselijkere wereld.</p>
+<p>Ik zou liegen als ik zou zeggen dat ik nog geen idee heb hoe ik dit zou willen doen. Een belangrijk deel van mijn droom is mijn ideeën uit te schrijven en deze uiteindelijk te bundelen in de vorm van een gestructureerd non-fictieboek. Toch geloof ik dat de grootste impact juist in het alledaagse ligt. Daarom probeer ik iedere dag er voor een ander te zijn. Wanneer ik iemand langs de straat zie zitten, kom ik soms later terug met een blikje cola. Je zou kunnen denken: <em>“Het is maar een blikje cola.”</em> En daar heb je gelijk in. Maar het gaat niet om dat blikje cola, het gaat erom dat de persoon aan de straatkant het gevoel krijgt: <em>“Ik zie je, en je doet ertoe.”</em> Ook als ik die woorden niet letterlijk uitspreek.</p>
+<p>Deze gedachte gaat uit van het geloof dat wij als individuen wél verschil kunnen maken in de wereld, ook al durft niet iedereen dat te geloven. Vaak hoor je: <em>“Wat kan ik nou in mijn eentje doen?”</em> Maar als iedereen zo denkt, komt echte verandering er nooit. Wat je doet in deze wereld, hoe klein of groot ook, heeft betekenis. Je kunt bijdragen aan een koudere en hardere wereld, of aan een wereld waarin mensen durven te geloven in hoop en in de kracht van liefde.</p>
+<p><strong>Opdracht 2: Wat is voor jou van belang om weer baas te worden en te blijven over je eigen leven?</strong></p>
+<p>Ik kan dit in twee woorden beantwoorden: gepaste uitdagingen.</p>
+<p>Om ervoor te zorgen dat ik herstel, blijf herstellen en verder groei, moet ik gepaste uitdagingen aangaan. Niet zo groot dat ik sowieso zal falen, want dan zet ik het op mijn lijstje van “Redenen waarom ik niks kan”. Maar ook niet te klein, zodat ik niet hoef te groeien om het te behalen.</p>
+<p>Ik noem dit principe “Rekken maar niet breken”. Je zoekt uiteindelijk iets wat je uitdaagt zodat je groeit, maar niet iets wat hoogstwaarschijnlijk zal mislukken.</p>
+<p>Waar je uiteindelijk achterkomt, nadat je zo vaak gefaald hebt in iets, is dat falen een cadeautje is. Winnen is leuk, natuurlijk. Maar als je faalt, raak je een grens in je kunnen aan, een grens in je begrip.</p>
+<p>Nadat je deze grens ziet, kun je er voorbij groeien en iets anders proberen de volgende keer. Succes is vooral een bevestiging van “Je doet het goed”. Dit is fijn en heeft ieder mens af en toe nodig.</p>
+<p>Wat ik heb ontdekt, is dat falen veel waardevoller is, omdat je dan een punt van groei hebt geïdentificeerd.</p>
+<p>Maar dan moet je wel goed omgaan met het moment waarop je faalt.</p>
+<p>Als iets mislukt en je bent erg streng voor jezelf, met gedachten als “Ik kan niks”, “Ik ben niks waard” of “Ik zal het nooit kunnen”, dan is dat niet alleen een verschrikkelijk vermoeiende manier om met jezelf om te gaan, maar ook strategisch een slechte zet.</p>
+<p>Bedenk eens hoeveel tijd je kwijt bent aan gemeen zijn tegen jezelf. Als je die tijd besteedt aan daadwerkelijk onderzoeken wat er fout ging, in plaats van aan te nemen dat je het niet kunt, kun je het de volgende keer beter doen.</p>
+<p>Ik weet dat mijn herstel niet altijd makkelijk zal zijn. Soms zal het alles van me vragen, en zelfs nog wat extra.</p>
+<p>Toch weet ik dat ik het uit kan zitten. Ik weet dat ik de kracht in mij heb om de ergste stormen te doorstaan, ook al voelt dat soms anders.</p>
+<p>Het enige wat ik hoef te doen, is het moment uit te zitten als het slecht gaat. Zolang ik dat doe, zolang ik niet toe geef in een moment van zwakte en ga gebruiken, heb ik al het vertrouwen, maar dan ook echt al het vertrouwen, dat het goed zal komen.</p>
+<p>Misschien gebeurt er iets onverwachts. Misschien krijg ik nadat ik deze regel opschrijf wel een hartaanval en is dat dan het einde. That’s life</p>
+<p>Maar dan zal ik in mijn laatste momenten rust vinden in het feit dat ik mezelf heb overwonnen. Dat ik, ook in diepe dalen, de hoop heb gevonden om het beter te willen doen. Mijn laatste momenten zouden gevuld zijn met vreugde, vreugde omdat ik niet heb opgegeven. Vreugde omdat de wereld mij keer op keer heeft proberen te bewijzen dat het oké is om koud en bitter te zijn, maar ik daar niet in mee ben gegaan. Ik ben blijven geloven in de goedheid van de mens en ben blijven streven naar hoe ik weet dat de wereld kan zijn.</p>
+<p>Dat is wat mij betreft de beste conclusie van mijn leven die ik ooit had kunnen dromen</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#kennismaking" data-for="kennismaking">Kennismaking</a></li><li class="depth-0"><a href="#herstel" data-for="herstel">Herstel</a></li><li class="depth-0"><a href="#bouwsteen-1" data-for="bouwsteen-1">Bouwsteen 1</a></li><li class="depth-2"><a href="#opdracht-1-beschrijf-in-je-eigen-woorden-iets-over-je-kwetsbaarheid-wat-geeft-het-je-en-wat-ontneemt-het-je" data-for="opdracht-1-beschrijf-in-je-eigen-woorden-iets-over-je-kwetsbaarheid-wat-geeft-het-je-en-wat-ontneemt-het-je">Opdracht 1: Beschrijf in je eigen woorden iets over je kwetsbaarheid. Wat ‘geeft het je’ en ‘wat ontneemt het je’?</a></li><li class="depth-2"><a href="#opdracht-2-is-je-beeld-over-je-kwetsbaarheid-en-de-invloed-daarvan-op-je-leven-in-de-loop-van-de-tijd-veranderd" data-for="opdracht-2-is-je-beeld-over-je-kwetsbaarheid-en-de-invloed-daarvan-op-je-leven-in-de-loop-van-de-tijd-veranderd">Opdracht 2: Is je beeld over je kwetsbaarheid en de invloed daarvan op je leven in de loop van de tijd veranderd?</a></li><li class="depth-0"><a href="#bouwsteen-2-hulpverlening" data-for="bouwsteen-2-hulpverlening">Bouwsteen 2 Hulpverlening</a></li><li class="depth-1"><a href="#opdracht-1-op-welke-manier-ben-jij-voor-het-eerst-in-aanraking-gekomen-met-hulp" data-for="opdracht-1-op-welke-manier-ben-jij-voor-het-eerst-in-aanraking-gekomen-met-hulp">Opdracht 1: Op welke manier ben jij voor het eerst in aanraking gekomen met hulp?</a></li><li class="depth-1"><a href="#opdracht-2-kun-je-beschrijven-wat-deze-hulp-voor-jou-betekent-of-heeft-betekend" data-for="opdracht-2-kun-je-beschrijven-wat-deze-hulp-voor-jou-betekent-of-heeft-betekend">Opdracht 2: Kun je beschrijven wat deze hulp voor jou betekent of heeft betekend?</a></li><li class="depth-1"><a href="#opdracht-3-ga-je-nu-anders-om-met-hulp-dan-vroeger" data-for="opdracht-3-ga-je-nu-anders-om-met-hulp-dan-vroeger">Opdracht 3: Ga je nu anders om met hulp dan vroeger?</a></li><li class="depth-0"><a href="#bouwsteen-3-rollen" data-for="bouwsteen-3-rollen">Bouwsteen 3 Rollen</a></li><li class="depth-0"><a href="#opdracht-1-beschrijf-de-betekenis-van-je-rollen-in-het-verleden-en-in-het-heden-en-beschrijf-daarbij-welke-wensen-je-hebt-met-betrekking-tot-rollen" data-for="opdracht-1-beschrijf-de-betekenis-van-je-rollen-in-het-verleden-en-in-het-heden-en-beschrijf-daarbij-welke-wensen-je-hebt-met-betrekking-tot-rollen">Opdracht 1: Beschrijf de betekenis van je rollen in het verleden en in het heden. En beschrijf daarbij welke wensen je hebt met betrekking tot rollen?</a></li><li class="depth-0"><a href="#opdracht-2-welke-verwachtingen-en-eisen-stelde-de-omgeving-en-welke-verwachtingen-en-eisen-stelde-je-zelf-en-welke-verwachtingen-en-eisen-zijn-ernu" data-for="opdracht-2-welke-verwachtingen-en-eisen-stelde-de-omgeving-en-welke-verwachtingen-en-eisen-stelde-je-zelf-en-welke-verwachtingen-en-eisen-zijn-ernu">Opdracht 2: Welke verwachtingen en eisen stelde de omgeving en welke verwachtingen en eisen stelde je zelf? En welke verwachtingen en eisen zijn er nu?</a></li><li class="depth-0"><a href="#bouwsteen-3-rollen-1" data-for="bouwsteen-3-rollen-1">Bouwsteen 3 Rollen</a></li><li class="depth-1"><a href="#voorwoord" data-for="voorwoord">Voorwoord</a></li><li class="depth-1"><a href="#opdracht-1-wat-is-steun-geweest-voor-jou-en-wat-is-was-daar-voor-nodig" data-for="opdracht-1-wat-is-steun-geweest-voor-jou-en-wat-is-was-daar-voor-nodig">Opdracht 1: Wat is steun (geweest) voor jou en wat is (was) daar voor nodig?</a></li><li class="depth-1"><a href="#opdracht-2-wat-doe-je-kun-je-doen-op-een-moment-dat-je-steun-nodig-hebt-zowel-richting-anderen-als-jezelf" data-for="opdracht-2-wat-doe-je-kun-je-doen-op-een-moment-dat-je-steun-nodig-hebt-zowel-richting-anderen-als-jezelf">Opdracht 2: Wat doe je, kun je doen, op een moment dat je steun nodig hebt? Zowel richting anderen als jezelf?</a></li><li class="depth-0"><a href="#bouwsteen-5-eigen-oplossingen-en-valkuilen" data-for="bouwsteen-5-eigen-oplossingen-en-valkuilen">Bouwsteen 5 Eigen oplossingen en valkuilen</a></li><li class="depth-1"><a href="#opdracht-1-voor-welke-situaties-of-gebeurtenissen-moet-ik-oppassen" data-for="opdracht-1-voor-welke-situaties-of-gebeurtenissen-moet-ik-oppassen">Opdracht 1: Voor welke situaties of gebeurtenissen moet ik oppassen?</a></li><li class="depth-1"><a href="#opdracht-2-welke-hulp--en-overlevingsstrategie-heb-ik-ontwikkeld" data-for="opdracht-2-welke-hulp--en-overlevingsstrategie-heb-ik-ontwikkeld">Opdracht 2: Welke hulp- en overlevingsstrategie heb ik ontwikkeld?</a></li><li class="depth-0"><a href="#bouwsteen-6-stigma" data-for="bouwsteen-6-stigma">Bouwsteen 6 Stigma</a></li><li class="depth-0"><a href="#bouwsteen-7-toekomst" data-for="bouwsteen-7-toekomst">Bouwsteen 7 Toekomst</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="./postscript.js" type="module"></script></html>
