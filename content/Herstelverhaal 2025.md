@@ -1,6 +1,7 @@
 # Kennismaking
 **Wie ben ik?**
 
+
 Mijn naam is Tristan, ik ben 22 jaar en woon in Maastricht.  
 Mijn hobby’s zijn gitaar spelen, teksten schrijven, lezen en het beoefenen van Muay Thai.  
 Ik hou van elektronische muziek (EDM) en ga hier dus ook vaak naar feesten van.  
